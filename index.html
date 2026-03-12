@@ -21,6 +21,76 @@
     --text-secondary: #4a5068;
   }
 
+  /* ═══ RACI SLIDE ═══ */
+#s7 { background: var(--paper); }
+#s7 .raci-body {
+  padding: 0 38px 6px; flex: 1; min-height: 0;
+  display: flex; flex-direction: column; gap: 6px; overflow: hidden;
+}
+.raci-legend {
+  display: flex; gap: 10px; flex-shrink: 0; align-items: center; flex-wrap: wrap;
+}
+.raci-legend-item {
+  display: flex; align-items: center; gap: 5px;
+  font-family: 'DM Mono', monospace; font-size: 8px; color: var(--text-secondary);
+}
+.raci-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 20px; height: 16px; border-radius: 2px;
+  font-family: 'DM Mono', monospace; font-weight: 500; font-size: 8px;
+  letter-spacing: .04em; flex-shrink: 0;
+}
+.rb-ar { background: rgba(26,122,110,.15);  color: var(--teal);       border: 1px solid rgba(26,122,110,.35); }
+.rb-c  { background: rgba(196,154,60,.13);  color: #9a7520;           border: 1px solid rgba(196,154,60,.35); }
+.rb-i  { background: rgba(74,80,104,.09);   color: var(--text-secondary); border: 1px solid rgba(74,80,104,.2); }
+.rb-r  { background: rgba(26,95,122,.13);   color: var(--accent-bi);  border: 1px solid rgba(26,95,122,.3); }
+.rb-a  { background: rgba(107,58,125,.13);  color: var(--accent-ai);  border: 1px solid rgba(107,58,125,.3); }
+
+.raci-scroll { flex: 1; min-height: 0; overflow-y: auto; overflow-x: hidden; }
+.raci-scroll::-webkit-scrollbar { width: 3px; }
+.raci-scroll::-webkit-scrollbar-track { background: transparent; }
+.raci-scroll::-webkit-scrollbar-thumb { background: rgba(26,122,110,.3); border-radius: 2px; }
+
+.raci-table { width: 100%; border-collapse: collapse; font-size: 9px; }
+.raci-table thead th {
+  position: sticky; top: 0; z-index: 2;
+  padding: 6px 10px; text-align: center;
+  font-family: 'DM Mono', monospace; font-size: 8px;
+  letter-spacing: .07em; text-transform: uppercase;
+  border-bottom: 2px solid var(--mist);
+  white-space: nowrap; background: var(--paper);
+}
+.raci-table thead th:first-child { text-align: right; width: 38%; }
+.th-bi-col   { color: var(--accent-bi);  background: rgba(26,95,122,.05) !important; }
+.th-ai-col   { color: var(--accent-ai);  background: rgba(107,58,125,.05) !important; }
+.th-it-col   { color: var(--teal);       background: rgba(26,122,110,.04) !important; }
+.th-biz-col  { color: #9a7520;           background: rgba(196,154,60,.05) !important; }
+.th-fn-col   { color: var(--ink); }
+
+.raci-table tbody tr { border-bottom: 1px solid #ede9df; transition: background .15s; }
+.raci-table tbody tr:hover { background: rgba(26,122,110,.04); }
+.raci-table tbody tr:nth-child(even) { background: rgba(0,0,0,.018); }
+.raci-table tbody tr:nth-child(even):hover { background: rgba(26,122,110,.04); }
+
+.raci-table td { padding: 5px 10px; vertical-align: middle; text-align: center; }
+.raci-table td:first-child {
+  text-align: right; color: var(--ink); font-family: 'Cairo', sans-serif;
+  font-size: 9px; font-weight: 600; line-height: 1.4; padding-right: 12px;
+}
+.td-bi-col  { background: rgba(26,95,122,.025); }
+.td-ai-col  { background: rgba(107,58,125,.025); }
+.td-it-col  { background: rgba(26,122,110,.02); }
+.td-biz-col { background: rgba(196,154,60,.025); }
+
+.raci-group-header td {
+  background: rgba(26,122,110,.07) !important;
+  font-family: 'DM Mono', monospace; font-size: 7.5px;
+  text-transform: uppercase; letter-spacing: .1em;
+  color: var(--teal); font-weight: 700; text-align: right !important;
+  padding: 4px 12px; border-bottom: 1px solid rgba(26,122,110,.2);
+}
+
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   html, body {
@@ -585,7 +655,7 @@
           أفضل الممارسات العالمية لهيكلة وحدات الذكاء الاصطناعي وذكاء الأعمال تحت نموذج حوكمة موحد ومتكامل — يمكّن فرق النطاقات مع الحفاظ على معايير مركزية موحدة.
         </p>
         <div class="pills">
-          <span class="pill pill-teal">٦ شرائح</span>
+          <span class="pill pill-teal">٧ شرائح</span>
           <span class="pill pill-gold">تصميم الحوكمة</span>
           <span class="pill pill-slate">مسودة نقاش · ٢٠٢٦</span>
         </div>
@@ -1137,8 +1207,178 @@
 
         </div>
       </div>
-      <div class="slide-num">06 / 06</div>
+      <div class="slide-num">06 / 07</div>
     </section>
+
+
+    <!-- SLIDE 7 – RACI Matrix -->
+<section class="slide" id="s7">
+  <div class="corner-mark"></div>
+  <div class="corner-mark-bl"></div>
+
+  <div class="slide-header">
+    <div class="slide-title">
+      مصفوفة المسؤوليات
+      <span>RACI Matrix — AI Unit vs BI Center</span>
+    </div>
+    <div class="tag-box">Slide 07</div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="raci-body">
+
+    <!-- Legend -->
+    <div class="raci-legend">
+      <div class="raci-legend-item"><span class="raci-badge rb-ar">A/R</span>Accountable / Responsible</div>
+      <div class="raci-legend-item"><span class="raci-badge rb-r">R</span>Responsible</div>
+      <div class="raci-legend-item"><span class="raci-badge rb-a">A</span>Accountable</div>
+      <div class="raci-legend-item"><span class="raci-badge rb-c">C</span>Consulted</div>
+      <div class="raci-legend-item"><span class="raci-badge rb-i">I</span>Informed</div>
+    </div>
+
+    <!-- Table -->
+    <div class="raci-scroll">
+      <table class="raci-table">
+        <thead>
+          <tr>
+            <th class="th-fn-col">Function / Activity</th>
+            <th class="th-bi-col">BI Center</th>
+            <th class="th-ai-col">AI Unit</th>
+            <th class="th-it-col">IT / Digital Infra</th>
+            <th class="th-biz-col">Business Units</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- Group: Strategy & Governance -->
+          <tr class="raci-group-header"><td colspan="5">Strategy &amp; Governance</td></tr>
+          <tr>
+            <td>AI Strategy Alignment with Data &amp; Analytics</td>
+            <td class="td-bi-col"><span class="raci-badge rb-ar">A/R</span></td>
+            <td class="td-ai-col"><span class="raci-badge rb-c">C</span></td>
+            <td class="td-it-col"><span class="raci-badge rb-i">I</span></td>
+            <td class="td-biz-col"><span class="raci-badge rb-c">C</span></td>
+          </tr>
+          <tr>
+            <td>AI Governance Framework</td>
+            <td class="td-bi-col"><span class="raci-badge rb-c">C</span></td>
+            <td class="td-ai-col"><span class="raci-badge rb-ar">A/R</span></td>
+            <td class="td-it-col"><span class="raci-badge rb-c">C</span></td>
+            <td class="td-biz-col"><span class="raci-badge rb-i">I</span></td>
+          </tr>
+          <tr>
+            <td>AI Ethics &amp; Responsible AI Policies</td>
+            <td class="td-bi-col"><span class="raci-badge rb-c">C</span></td>
+            <td class="td-ai-col"><span class="raci-badge rb-ar">A/R</span></td>
+            <td class="td-it-col"><span class="raci-badge rb-i">I</span></td>
+            <td class="td-biz-col"><span class="raci-badge rb-i">I</span></td>
+          </tr>
+
+          <!-- Group: Data & Modelling -->
+          <tr class="raci-group-header"><td colspan="5">Data &amp; Modelling</td></tr>
+          <tr>
+            <td>Data Preparation &amp; Feature Engineering</td>
+            <td class="td-bi-col"><span class="raci-badge rb-ar">A/R</span></td>
+            <td class="td-ai-col"><span class="raci-badge rb-c">C</span></td>
+            <td class="td-it-col"><span class="raci-badge rb-c">C</span></td>
+            <td class="td-biz-col"><span class="raci-badge rb-i">I</span></td>
+          </tr>
+          <tr>
+            <td>Development of Predictive Models</td>
+            <td class="td-bi-col"><span class="raci-badge rb-ar">A/R</span></td>
+            <td class="td-ai-col"><span class="raci-badge rb-c">C</span></td>
+            <td class="td-it-col"><span class="raci-badge rb-i">I</span></td>
+            <td class="td-biz-col"><span class="raci-badge rb-c">C</span></td>
+          </tr>
+          <tr>
+            <td>Advanced Analytics &amp; Statistical Models</td>
+            <td class="td-bi-col"><span class="raci-badge rb-ar">A/R</span></td>
+            <td class="td-ai-col"><span class="raci-badge rb-i">I</span></td>
+            <td class="td-it-col"><span class="raci-badge rb-i">I</span></td>
+            <td class="td-biz-col"><span class="raci-badge rb-c">C</span></td>
+          </tr>
+
+          <!-- Group: Use Case Management -->
+          <tr class="raci-group-header"><td colspan="5">Use Case Management</td></tr>
+          <tr>
+            <td>Business Use Case Identification</td>
+            <td class="td-bi-col"><span class="raci-badge rb-ar">A/R</span></td>
+            <td class="td-ai-col"><span class="raci-badge rb-c">C</span></td>
+            <td class="td-it-col"><span class="raci-badge rb-i">I</span></td>
+            <td class="td-biz-col"><span class="raci-badge rb-r">R</span></td>
+          </tr>
+          <tr>
+            <td>AI Use Case Prioritization</td>
+            <td class="td-bi-col"><span class="raci-badge rb-ar">A/R</span></td>
+            <td class="td-ai-col"><span class="raci-badge rb-c">C</span></td>
+            <td class="td-it-col"><span class="raci-badge rb-i">I</span></td>
+            <td class="td-biz-col"><span class="raci-badge rb-c">C</span></td>
+          </tr>
+
+          <!-- Group: Platform & Infrastructure -->
+          <tr class="raci-group-header"><td colspan="5">Platform &amp; Infrastructure</td></tr>
+          <tr>
+            <td>AI Platform &amp; Infrastructure</td>
+            <td class="td-bi-col"><span class="raci-badge rb-i">I</span></td>
+            <td class="td-ai-col"><span class="raci-badge rb-ar">A/R</span></td>
+            <td class="td-it-col"><span class="raci-badge rb-r">R</span></td>
+            <td class="td-biz-col"><span class="raci-badge rb-i">I</span></td>
+          </tr>
+          <tr>
+            <td>MLOps &amp; Model Deployment Framework</td>
+            <td class="td-bi-col"><span class="raci-badge rb-c">C</span></td>
+            <td class="td-ai-col"><span class="raci-badge rb-ar">A/R</span></td>
+            <td class="td-it-col"><span class="raci-badge rb-r">R</span></td>
+            <td class="td-biz-col"><span class="raci-badge rb-i">I</span></td>
+          </tr>
+          <tr>
+            <td>Experimentation (AI Sandbox / Lab)</td>
+            <td class="td-bi-col"><span class="raci-badge rb-r">R</span></td>
+            <td class="td-ai-col"><span class="raci-badge rb-a">A</span></td>
+            <td class="td-it-col"><span class="raci-badge rb-c">C</span></td>
+            <td class="td-biz-col"><span class="raci-badge rb-c">C</span></td>
+          </tr>
+          <tr>
+            <td>Model Monitoring &amp; Lifecycle Management</td>
+            <td class="td-bi-col"><span class="raci-badge rb-c">C</span></td>
+            <td class="td-ai-col"><span class="raci-badge rb-ar">A/R</span></td>
+            <td class="td-it-col"><span class="raci-badge rb-r">R</span></td>
+            <td class="td-biz-col"><span class="raci-badge rb-i">I</span></td>
+          </tr>
+
+          <!-- Group: Insight & Capability -->
+          <tr class="raci-group-header"><td colspan="5">Insight &amp; Capability</td></tr>
+          <tr>
+            <td>Insight Generation &amp; Decision Support</td>
+            <td class="td-bi-col"><span class="raci-badge rb-ar">A/R</span></td>
+            <td class="td-ai-col"><span class="raci-badge rb-i">I</span></td>
+            <td class="td-it-col"><span class="raci-badge rb-i">I</span></td>
+            <td class="td-biz-col"><span class="raci-badge rb-c">C</span></td>
+          </tr>
+          <tr>
+            <td>AI-powered Dashboards &amp; Decision Systems</td>
+            <td class="td-bi-col"><span class="raci-badge rb-ar">A/R</span></td>
+            <td class="td-ai-col"><span class="raci-badge rb-c">C</span></td>
+            <td class="td-it-col"><span class="raci-badge rb-i">I</span></td>
+            <td class="td-biz-col"><span class="raci-badge rb-c">C</span></td>
+          </tr>
+          <tr>
+            <td>AI Capability Building</td>
+            <td class="td-bi-col"><span class="raci-badge rb-c">C</span></td>
+            <td class="td-ai-col"><span class="raci-badge rb-ar">A/R</span></td>
+            <td class="td-it-col"><span class="raci-badge rb-i">I</span></td>
+            <td class="td-biz-col"><span class="raci-badge rb-i">I</span></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+  <div class="slide-num">07 / 07</div>
+</section>
+
+    
 
   </div>
 </div>
