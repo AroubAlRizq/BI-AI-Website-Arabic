@@ -22,75 +22,6 @@
     --text-secondary: #5e4d48;
   }
 
-  /* ═══ RACI SLIDE ═══ */
-#s8 { background: var(--paper); }
-#s8 .raci-body {
-  padding: 0 38px 2px; flex: 1; min-height: 0;
-  display: flex; flex-direction: column; gap: 4px; overflow: hidden;
-}
-.raci-legend {
-  display: flex; gap: 10px; flex-shrink: 0; align-items: center; flex-wrap: wrap; margin-bottom: 2px;
-}
-.raci-legend-item {
-  display: flex; align-items: center; gap: 5px;
-  font-family: 'DM Mono', monospace; font-size: 8px; color: var(--text-secondary);
-}
-.raci-badge {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 20px; height: 16px; border-radius: 2px;
-  font-family: 'DM Mono', monospace; font-weight: 500; font-size: 8px;
-  letter-spacing: .04em; flex-shrink: 0;
-}
-.rb-ar { background: rgba(116,54,33,.15);  color: var(--teal);       border: 1px solid rgba(116,54,33,.35); }
-.rb-c  { background: rgba(216,159,91,.13); color: #a1723a;           border: 1px solid rgba(216,159,91,.35); }
-.rb-i  { background: rgba(59,44,40,.09);   color: var(--text-secondary); border: 1px solid rgba(59,44,40,.2); }
-.rb-r  { background: rgba(23,60,83,.13);   color: var(--accent-bi);  border: 1px solid rgba(23,60,83,.3); }
-.rb-a  { background: rgba(216,159,91,.13); color: var(--accent-ai);  border: 1px solid rgba(216,159,91,.3); }
-
-.raci-scroll { flex: 1; min-height: 0; overflow-y: auto; overflow-x: hidden; }
-.raci-scroll::-webkit-scrollbar { width: 3px; }
-.raci-scroll::-webkit-scrollbar-track { background: transparent; }
-.raci-scroll::-webkit-scrollbar-thumb { background: rgba(116,54,33,.3); border-radius: 2px; }
-
-.raci-table { width: 100%; border-collapse: collapse; font-size: 8.5px; }
-.raci-table thead th {
-  position: sticky; top: 0; z-index: 2;
-  padding: 4px 8px; text-align: center;
-  font-family: 'DM Mono', monospace; font-size: 7.5px;
-  letter-spacing: .07em; text-transform: uppercase;
-  border-bottom: 2px solid var(--mist);
-  white-space: nowrap; background: var(--paper);
-}
-.raci-table thead th:first-child { text-align: right; width: 38%; }
-.th-bi-col   { color: var(--accent-bi);  background: rgba(23,60,83,.05) !important; }
-.th-ai-col   { color: var(--accent-ai);  background: rgba(216,159,91,.05) !important; }
-.th-it-col   { color: var(--teal);       background: rgba(116,54,33,.04) !important; }
-.th-biz-col  { color: #a1723a;           background: rgba(216,159,91,.05) !important; }
-.th-fn-col   { color: var(--ink); }
-
-.raci-table tbody tr { border-bottom: 1px solid #ede9df; transition: background .15s; }
-.raci-table tbody tr:hover { background: rgba(116,54,33,.04); }
-.raci-table tbody tr:nth-child(even) { background: rgba(0,0,0,.018); }
-.raci-table tbody tr:nth-child(even):hover { background: rgba(116,54,33,.04); }
-
-.raci-table td { padding: 3.5px 8px; vertical-align: middle; text-align: center; }
-.raci-table td:first-child {
-  text-align: right; color: var(--ink); font-family: 'Cairo', sans-serif;
-  font-size: 8.5px; font-weight: 600; line-height: 1.3; padding-right: 12px;
-}
-.td-bi-col  { background: rgba(23,60,83,.025); }
-.td-ai-col  { background: rgba(216,159,91,.025); }
-.td-it-col  { background: rgba(116,54,33,.02); }
-.td-biz-col { background: rgba(216,159,91,.025); }
-
-.raci-group-header td {
-  background: rgba(116,54,33,.07) !important;
-  font-family: 'DM Mono', monospace; font-size: 7px;
-  text-transform: uppercase; letter-spacing: .1em;
-  color: var(--teal); font-weight: 700; text-align: right !important;
-  padding: 3px 12px; border-bottom: 1px solid rgba(116,54,33,.2);
-}
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   html, body {
@@ -130,7 +61,7 @@
     inset: 0;
     width: 960px;
     height: 540px;
-    background: var(--paper);
+    background: var(--paper); /* جميع الشرائح بخلفية فاتحة افتراضيا */
     opacity: 0;
     pointer-events: none;
     transition: opacity .55s cubic-bezier(.4,0,.2,1), transform .55s cubic-bezier(.4,0,.2,1);
@@ -192,7 +123,7 @@
     letter-spacing: .15em; padding: 4px 11px; text-transform: uppercase; flex-shrink: 0;
   }
 
-  /* ═══ SLIDE 1 – Cover ═══ */
+  /* ═══ SLIDE 1 – Cover (استثناء ليبقى غامقاً) ═══ */
   #s1 { background: var(--ink); flex-direction: row; align-items: center; }
   #s1 .bg-geo {
     position: absolute; inset: 0;
@@ -258,8 +189,7 @@
 
   .hs-pillar {
     background: #fff; border: 1px solid #ddd9ce; border-radius: 3px;
-    padding: 9px 12px; display: flex; align-items: flex-start; gap: 8px;
-    flex-shrink: 0;
+    padding: 9px 12px; display: flex; align-items: flex-start; gap: 8px; flex-shrink: 0;
   }
   .hs-pillar-icon {
     width: 26px; height: 26px; border-radius: 50%;
@@ -288,13 +218,13 @@
   #s2 .hs-key strong { color: var(--teal); }
 
   /* ═══ SLIDE 3 – Institutions ═══ */
-  #s3 { background: var(--paper); }
   #s3 .inst-body {
     padding: 0 38px; flex: 1; min-height: 0; display: flex;
     flex-direction: column; gap: 8px; overflow: hidden;
   }
   .orgs-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
+    /* تم التغيير إلى عمودين لملء الصفحة بالكامل */
+    display: grid; grid-template-columns: repeat(2, 1fr);
     gap: 10px; flex: 1; min-height: 0; overflow: hidden;
   }
   .org-col {
@@ -377,6 +307,7 @@
   .spoke-role { font-size: 7.5px; color: var(--text-secondary); line-height: 1.45; }
 
   .model-note {
+    margin-top: 4px;
     padding: 5px 10px; background: rgba(116,54,33,.06);
     border-right: 3px solid var(--teal); border-radius: 2px 0 0 2px;
     font-size: 8px; color: var(--text-secondary); line-height: 1.65; flex-shrink: 0;
@@ -459,61 +390,127 @@
   .legend-dot { width: 7px; height: 7px; border-radius: 50%; }
 
   /* ═══ SLIDE 6 – Visual Operating Model ═══ */
-  #s6 { background: var(--ink); }
-  #s6 .slide-title { color: #fff; }
-  #s6 .slide-title span { color: var(--gold-light); }
-  #s6 .divider { background: linear-gradient(270deg, rgba(255,255,255,.2), transparent); height: 1px; }
-
   #s6 .om-wrap {
     flex: 1; min-height: 0; padding: 0 38px 6px;
     display: flex; flex-direction: column; gap: 6px; overflow: hidden;
   }
   .layer-label {
     font-family: 'Tajawal', sans-serif; font-size: 9px; font-weight: 500;
-    text-transform: uppercase; color: rgba(255,255,255,.35); flex-shrink: 0;
+    text-transform: uppercase; color: var(--text-secondary); flex-shrink: 0;
   }
   .hub-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; flex-shrink: 0; }
   .hub-box { border-radius: 3px; padding: 8px 12px; }
-  .box-dt { background: rgba(216,159,91,.2); border: 1px solid rgba(216,159,91,.45); }
-  .box-bi { background: rgba(23,60,83,.2); border: 1px solid rgba(23,60,83,.45); }
+  .box-dt { background: rgba(216,159,91,.1); border: 1px solid rgba(216,159,91,.4); }
+  .box-bi { background: rgba(23,60,83,.1); border: 1px solid rgba(23,60,83,.4); }
   .hub-box-title {
     font-family: 'Cairo', sans-serif; font-size: 9.5px; font-weight: 700;
     letter-spacing: .03em; margin-bottom: 5px; text-transform: uppercase;
   }
-  .box-dt .hub-box-title { color: var(--gold-light); }
-  .box-bi .hub-box-title { color: #8bbdd9; }
+  .box-dt .hub-box-title { color: var(--teal); }
+  .box-bi .hub-box-title { color: var(--accent-bi); }
   .hub-box ul { list-style: none; display: flex; flex-direction: column; gap: 3px; }
   .hub-box ul li {
-    font-size: 8.5px; color: rgba(255,255,255,.6);
+    font-size: 8.5px; color: var(--text-secondary);
     display: flex; align-items: flex-start; gap: 5px; line-height: 1.5;
   }
-  .bullet-dt { color: var(--gold-light); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
-  .bullet-bi { color: #8bbdd9; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .bullet-dt { color: var(--teal); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .bullet-bi { color: var(--accent-bi); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
 
   .fov-container { display: flex; flex-direction: column; gap: 5px; flex: 1; min-height: 0; overflow: hidden; }
-  .fov-divider { height: 1px; background: linear-gradient(270deg, rgba(255,255,255,.08), transparent); flex-shrink: 0; }
+  .fov-divider { height: 1px; background: linear-gradient(270deg, rgba(0,0,0,.08), transparent); flex-shrink: 0; }
   .fov-lane { display: flex; flex-direction: column; gap: 4px; flex: 1; min-height: 0; }
   .fov-lane-header { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
   .fov-lane-title { font-family: 'Tajawal', sans-serif; font-size: 9px; font-weight: 700; white-space: nowrap; flex-shrink: 0; }
   .fov-arrow-label { font-size: 12px; flex-shrink: 0; }
   .fov-lane-line { flex: 1; height: 1px; }
   
-  .outbound .fov-lane-title, .fov-lane-title.outbound { color: #8bbdd9; }
-  .fov-arrow-label.outbound  { color: #8bbdd9; }
-  .fov-lane-line.outbound    { background: linear-gradient(270deg, rgba(139,189,217,.3), transparent); }
-  .inbound .fov-lane-title, .fov-lane-title.inbound   { color: var(--gold-light); }
-  .fov-arrow-label.inbound   { color: var(--gold-light); }
-  .fov-lane-line.inbound     { background: linear-gradient(270deg, rgba(240,197,141,.3), transparent); }
+  .outbound .fov-lane-title, .fov-lane-title.outbound { color: var(--accent-bi); }
+  .fov-arrow-label.outbound  { color: var(--accent-bi); }
+  .fov-lane-line.outbound    { background: linear-gradient(270deg, rgba(23,60,83,.3), transparent); }
+  .inbound .fov-lane-title, .fov-lane-title.inbound   { color: var(--teal); }
+  .fov-arrow-label.inbound   { color: var(--teal); }
+  .fov-lane-line.inbound     { background: linear-gradient(270deg, rgba(216,159,91,.4), transparent); }
 
   .fov-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; flex-shrink: 0; }
   .fov-card { border-radius: 3px; padding: 6px 8px; display: flex; flex-direction: column; gap: 3px; }
-  .out-card { background: rgba(23,60,83,.15); border: 1px solid rgba(23,60,83,.3); }
-  .in-card  { background: rgba(216,159,91,.15); border: 1px solid rgba(216,159,91,.3); }
+  .out-card { background: rgba(23,60,83,.05); border: 1px solid rgba(23,60,83,.2); }
+  .in-card  { background: rgba(216,159,91,.08); border: 1px solid rgba(216,159,91,.3); }
   .fov-card-icon { flex-shrink: 0; }
   .fov-card-title { font-family: 'Tajawal', sans-serif; font-size: 8.5px; font-weight: 700; line-height: 1.3; }
-  .out-card .fov-card-title { color: #8bbdd9; }
-  .in-card  .fov-card-title { color: var(--gold-light); }
-  .fov-card-desc { font-size: 7.5px; color: rgba(255,255,255,.45); line-height: 1.5; }
+  .out-card .fov-card-title { color: var(--accent-bi); }
+  .in-card  .fov-card-title { color: var(--teal); }
+  .fov-card-desc { font-size: 7.5px; color: var(--text-secondary); line-height: 1.5; }
+
+  /* Slide 7 Box Styles */
+  .s7-box { flex: 1; background: #fff; border: 1px solid #ddd9ce; border-radius: 3px; padding: 15px; }
+  .s7-box h5 { font-size: 13px; margin-bottom: 8px; font-family: 'Cairo', sans-serif; }
+  .s7-box ul { font-size: 10.5px; color: var(--text-secondary); line-height: 1.7; padding-right: 18px; }
+
+  /* ═══ SLIDE 8 – RACI Matrix (Adjusted to definitely fit) ═══ */
+  #s8 .raci-body {
+    padding: 0 38px 0px; flex: 1; min-height: 0;
+    display: flex; flex-direction: column; gap: 2px; overflow: hidden; /* gap was 4px */
+  }
+  .raci-legend {
+    display: flex; gap: 10px; flex-shrink: 0; align-items: center; flex-wrap: wrap; margin-bottom: 0px;
+  }
+  .raci-legend-item {
+    display: flex; align-items: center; gap: 5px;
+    font-family: 'DM Mono', monospace; font-size: 7.5px; color: var(--text-secondary);
+  }
+  .raci-badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 20px; height: 16px; border-radius: 2px;
+    font-family: 'DM Mono', monospace; font-weight: 500; font-size: 7.5px;
+    letter-spacing: .04em; flex-shrink: 0;
+  }
+  .rb-ar { background: rgba(116,54,33,.15);  color: var(--teal);       border: 1px solid rgba(116,54,33,.35); }
+  .rb-c  { background: rgba(216,159,91,.13); color: #a1723a;           border: 1px solid rgba(216,159,91,.35); }
+  .rb-i  { background: rgba(59,44,40,.09);   color: var(--text-secondary); border: 1px solid rgba(59,44,40,.2); }
+  .rb-r  { background: rgba(23,60,83,.13);   color: var(--accent-bi);  border: 1px solid rgba(23,60,83,.3); }
+  .rb-a  { background: rgba(216,159,91,.13); color: var(--accent-ai);  border: 1px solid rgba(216,159,91,.3); }
+
+  /* We force hidden so scrollbars do not appear at all */
+  .raci-scroll { flex: 1; min-height: 0; overflow: hidden; padding-bottom: 5px; }
+
+  .raci-table { width: 100%; border-collapse: collapse; font-size: 7.5px; }
+  .raci-table thead th {
+    position: sticky; top: 0; z-index: 2;
+    padding: 2px 6px; text-align: center;
+    font-family: 'DM Mono', monospace; font-size: 7px;
+    letter-spacing: .07em; text-transform: uppercase;
+    border-bottom: 1px solid var(--mist);
+    white-space: nowrap; background: var(--paper);
+  }
+  .raci-table thead th:first-child { text-align: right; width: 38%; }
+  .th-bi-col   { color: var(--accent-bi);  background: rgba(23,60,83,.05) !important; }
+  .th-ai-col   { color: var(--accent-ai);  background: rgba(216,159,91,.05) !important; }
+  .th-it-col   { color: var(--teal);       background: rgba(116,54,33,.04) !important; }
+  .th-biz-col  { color: #a1723a;           background: rgba(216,159,91,.05) !important; }
+  .th-fn-col   { color: var(--ink); }
+
+  .raci-table tbody tr { border-bottom: 1px solid #ede9df; transition: background .15s; }
+  .raci-table tbody tr:hover { background: rgba(116,54,33,.04); }
+  .raci-table tbody tr:nth-child(even) { background: rgba(0,0,0,.018); }
+  .raci-table tbody tr:nth-child(even):hover { background: rgba(116,54,33,.04); }
+
+  .raci-table td { padding: 2.5px 6px; vertical-align: middle; text-align: center; }
+  .raci-table td:first-child {
+    text-align: right; color: var(--ink); font-family: 'Cairo', sans-serif;
+    font-size: 8px; font-weight: 600; line-height: 1.2; padding-right: 8px;
+  }
+  .td-bi-col  { background: rgba(23,60,83,.025); }
+  .td-ai-col  { background: rgba(216,159,91,.025); }
+  .td-it-col  { background: rgba(116,54,33,.02); }
+  .td-biz-col { background: rgba(216,159,91,.025); }
+
+  .raci-group-header td {
+    background: rgba(116,54,33,.07) !important;
+    font-family: 'DM Mono', monospace; font-size: 6.5px;
+    text-transform: uppercase; letter-spacing: .1em;
+    color: var(--teal); font-weight: 700; text-align: right !important;
+    padding: 2px 10px; border-bottom: 1px solid rgba(116,54,33,.2);
+  }
 
   /* ── Navigation ── */
   #nav { display: flex; align-items: center; margin-top: 14px; direction: ltr; }
@@ -532,17 +529,6 @@
   }
   .nav-dot.active { background: var(--gold-light); transform: scale(1.4); }
   #hint { margin-top: 7px; font-family: 'DM Mono', monospace; font-size: 9px; color: rgba(255,255,255,.2); letter-spacing: .1em; direction: ltr; }
-
-  /* Slide 7 Box Styles */
-  .s7-box {
-      flex: 1; background: #fff; border: 1px solid #ddd9ce; border-radius: 3px; padding: 15px;
-  }
-  .s7-box h5 {
-      font-size: 13px; margin-bottom: 8px; font-family: 'Cairo', sans-serif;
-  }
-  .s7-box ul {
-      font-size: 10.5px; color: var(--text-secondary); line-height: 1.7; padding-right: 18px;
-  }
 </style>
 </head>
 <body>
@@ -990,17 +976,17 @@
             </div>
             <div class="fov-cards">
               <div class="fov-card out-card">
-                <div class="fov-card-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="5" width="10" height="2" rx="1" fill="#8bbdd9"/><rect x="5" y="1" width="2" height="10" rx="1" fill="#8bbdd9"/></svg></div>
+                <div class="fov-card-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="5" width="10" height="2" rx="1" fill="var(--accent-bi)"/><rect x="5" y="1" width="2" height="10" rx="1" fill="var(--accent-bi)"/></svg></div>
                 <div class="fov-card-title">منصات وواجهات الذكاء الاصطناعي</div>
                 <div class="fov-card-desc">بنية تحتية للتعلم الآلي ونقاط نهاية النماذج متاحة لجميع وحدات النطاقات</div>
               </div>
               <div class="fov-card out-card">
-                <div class="fov-card-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#8bbdd9" stroke-width="1.5"/><path d="M4 6h4M6 4v4" stroke="#8bbdd9" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+                <div class="fov-card-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="var(--accent-bi)" stroke-width="1.5"/><path d="M4 6h4M6 4v4" stroke="var(--accent-bi)" stroke-width="1.2" stroke-linecap="round"/></svg></div>
                 <div class="fov-card-title">معايير وسياسات البيانات</div>
                 <div class="fov-card-desc">أطر حوكمة البيانات الموحدة والتعريفات ومعايير الجودة</div>
               </div>
               <div class="fov-card out-card">
-                <div class="fov-card-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6 C2 3.8 3.8 2 6 2 C8.2 2 10 3.8 10 6" stroke="#8bbdd9" stroke-width="1.3" stroke-linecap="round"/><circle cx="6" cy="6" r="1.5" fill="#8bbdd9"/></svg></div>
+                <div class="fov-card-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6 C2 3.8 3.8 2 6 2 C8.2 2 10 3.8 10 6" stroke="var(--accent-bi)" stroke-width="1.3" stroke-linecap="round"/><circle cx="6" cy="6" r="1.5" fill="var(--accent-bi)"/></svg></div>
                 <div class="fov-card-title">التوافق الاستراتيجي</div>
                 <div class="fov-card-desc">خارطة طريق الذكاء الاصطناعي المؤسسية وحالات الاستخدام المُرتبة وأطر الابتكار</div>
               </div>
@@ -1017,22 +1003,22 @@
             </div>
             <div class="fov-cards">
               <div class="fov-card in-card">
-                <div class="fov-card-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="1" width="4" height="4" rx="1" fill="#d89f5b" opacity=".7"/><rect x="7" y="1" width="4" height="4" rx="1" fill="#d89f5b" opacity=".7"/><rect x="1" y="7" width="4" height="4" rx="1" fill="#d89f5b" opacity=".7"/><rect x="7" y="7" width="4" height="4" rx="1" fill="#d89f5b" opacity=".4"/></svg></div>
+                <div class="fov-card-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><rect x="1" y="1" width="4" height="4" rx="1" fill="var(--teal)" opacity=".7"/><rect x="7" y="1" width="4" height="4" rx="1" fill="var(--teal)" opacity=".7"/><rect x="1" y="7" width="4" height="4" rx="1" fill="var(--teal)" opacity=".7"/><rect x="7" y="7" width="4" height="4" rx="1" fill="var(--teal)" opacity=".4"/></svg></div>
                 <div class="fov-card-title">بيانات النطاق</div>
                 <div class="fov-card-desc">مجموعات بيانات خاصة بالنطاق وسجلات تشغيلية وملاحظات ميدانية</div>
               </div>
               <div class="fov-card in-card">
-                <div class="fov-card-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2 L10 5 L10 10 L2 10 L2 5 Z" stroke="#d89f5b" stroke-width="1.3" stroke-linejoin="round"/><line x1="6" y1="7" x2="6" y2="10" stroke="#d89f5b" stroke-width="1.2"/></svg></div>
+                <div class="fov-card-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2 L10 5 L10 10 L2 10 L2 5 Z" stroke="var(--teal)" stroke-width="1.3" stroke-linejoin="round"/><line x1="6" y1="7" x2="6" y2="10" stroke="var(--teal)" stroke-width="1.2"/></svg></div>
                 <div class="fov-card-title">حالات الاستخدام والمتطلبات</div>
                 <div class="fov-card-desc">طلبات ذكاء اصطناعي وتحليلات جديدة وتعريفات مشاكل وأولويات تحسين محلية</div>
               </div>
               <div class="fov-card in-card">
-                <div class="fov-card-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="4.5" stroke="#d89f5b" stroke-width="1.3"/><path d="M4 6.5 L5.5 8 L8 4.5" stroke="#d89f5b" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="fov-card-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="4.5" stroke="var(--teal)" stroke-width="1.3"/><path d="M4 6.5 L5.5 8 L8 4.5" stroke="var(--teal)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
                 <div class="fov-card-title">الرؤى المحلية والتغذية الراجعة</div>
                 <div class="fov-card-desc">استخبارات ميدانية وتقارير أداء النماذج وتغذية راجعة حول التبني</div>
               </div>
               <div class="fov-card in-card">
-                <div class="fov-card-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 9 L5 5 L7 7 L9 4" stroke="#d89f5b" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="3.5" r="1.2" fill="#d89f5b"/></svg></div>
+                <div class="fov-card-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 9 L5 5 L7 7 L9 4" stroke="var(--teal)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="3.5" r="1.2" fill="var(--teal)"/></svg></div>
                 <div class="fov-card-title">مقاييس النتائج</div>
                 <div class="fov-card-desc">بيانات أداء مؤشرات الأداء وأدلة العائد على الاستثمار والنتائج التشغيلية</div>
               </div>
