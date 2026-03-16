@@ -223,7 +223,6 @@
     flex-direction: column; gap: 8px; overflow: hidden;
   }
   .orgs-grid {
-    /* تم التغيير إلى عمودين لملء الصفحة بالكامل */
     display: grid; grid-template-columns: repeat(2, 1fr);
     gap: 10px; flex: 1; min-height: 0; overflow: hidden;
   }
@@ -441,18 +440,13 @@
   .in-card  .fov-card-title { color: var(--teal); }
   .fov-card-desc { font-size: 7.5px; color: var(--text-secondary); line-height: 1.5; }
 
-  /* Slide 7 Box Styles */
-  .s7-box { flex: 1; background: #fff; border: 1px solid #ddd9ce; border-radius: 3px; padding: 15px; }
-  .s7-box h5 { font-size: 13px; margin-bottom: 8px; font-family: 'Cairo', sans-serif; }
-  .s7-box ul { font-size: 10.5px; color: var(--text-secondary); line-height: 1.7; padding-right: 18px; }
-
-  /* ═══ SLIDE 8 – RACI Matrix (Adjusted to definitely fit) ═══ */
-  #s8 .raci-body {
+  /* ═══ SLIDE 7 – RACI Matrix ═══ */
+  #s7 .raci-body {
     padding: 0 38px 0px; flex: 1; min-height: 0;
-    display: flex; flex-direction: column; gap: 2px; overflow: hidden; /* gap was 4px */
+    display: flex; flex-direction: column; gap: 4px; overflow: hidden;
   }
   .raci-legend {
-    display: flex; gap: 10px; flex-shrink: 0; align-items: center; flex-wrap: wrap; margin-bottom: 0px;
+    display: flex; gap: 10px; flex-shrink: 0; align-items: center; flex-wrap: wrap; margin-bottom: 2px;
   }
   .raci-legend-item {
     display: flex; align-items: center; gap: 5px;
@@ -465,19 +459,20 @@
     letter-spacing: .04em; flex-shrink: 0;
   }
   .rb-ar { background: rgba(116,54,33,.15);  color: var(--teal);       border: 1px solid rgba(116,54,33,.35); }
+  .rb-cr { background: rgba(216,159,91,.13); color: #a1723a;           border: 1px solid rgba(216,159,91,.35); }
+  .rb-ci { background: rgba(59,44,40,.09);   color: var(--text-secondary); border: 1px solid rgba(59,44,40,.2); }
   .rb-c  { background: rgba(216,159,91,.13); color: #a1723a;           border: 1px solid rgba(216,159,91,.35); }
   .rb-i  { background: rgba(59,44,40,.09);   color: var(--text-secondary); border: 1px solid rgba(59,44,40,.2); }
   .rb-r  { background: rgba(23,60,83,.13);   color: var(--accent-bi);  border: 1px solid rgba(23,60,83,.3); }
   .rb-a  { background: rgba(216,159,91,.13); color: var(--accent-ai);  border: 1px solid rgba(216,159,91,.3); }
 
-  /* We force hidden so scrollbars do not appear at all */
   .raci-scroll { flex: 1; min-height: 0; overflow: hidden; padding-bottom: 5px; }
 
-  .raci-table { width: 100%; border-collapse: collapse; font-size: 7.5px; }
+  .raci-table { width: 100%; border-collapse: collapse; font-size: 8px; }
   .raci-table thead th {
     position: sticky; top: 0; z-index: 2;
-    padding: 2px 6px; text-align: center;
-    font-family: 'DM Mono', monospace; font-size: 7px;
+    padding: 4px 6px; text-align: center;
+    font-family: 'DM Mono', monospace; font-size: 7.5px;
     letter-spacing: .07em; text-transform: uppercase;
     border-bottom: 1px solid var(--mist);
     white-space: nowrap; background: var(--paper);
@@ -494,10 +489,10 @@
   .raci-table tbody tr:nth-child(even) { background: rgba(0,0,0,.018); }
   .raci-table tbody tr:nth-child(even):hover { background: rgba(116,54,33,.04); }
 
-  .raci-table td { padding: 2.5px 6px; vertical-align: middle; text-align: center; }
+  .raci-table td { padding: 4px 6px; vertical-align: middle; text-align: center; }
   .raci-table td:first-child {
     text-align: right; color: var(--ink); font-family: 'Cairo', sans-serif;
-    font-size: 8px; font-weight: 600; line-height: 1.2; padding-right: 8px;
+    font-size: 8.5px; font-weight: 600; line-height: 1.25; padding-right: 8px;
   }
   .td-bi-col  { background: rgba(23,60,83,.025); }
   .td-ai-col  { background: rgba(216,159,91,.025); }
@@ -506,10 +501,10 @@
 
   .raci-group-header td {
     background: rgba(116,54,33,.07) !important;
-    font-family: 'DM Mono', monospace; font-size: 6.5px;
+    font-family: 'DM Mono', monospace; font-size: 7px;
     text-transform: uppercase; letter-spacing: .1em;
     color: var(--teal); font-weight: 700; text-align: right !important;
-    padding: 2px 10px; border-bottom: 1px solid rgba(116,54,33,.2);
+    padding: 3px 10px; border-bottom: 1px solid rgba(116,54,33,.2);
   }
 
   /* ── Navigation ── */
@@ -547,7 +542,7 @@
           أفضل الممارسات العالمية لهيكلة وحدات الذكاء الاصطناعي وذكاء الأعمال تحت نموذج حوكمة موحد ومتكامل — يمكّن فرق النطاقات مع الحفاظ على معايير مركزية موحدة.
         </p>
         <div class="pills">
-          <span class="pill pill-teal">٨ شرائح</span>
+          <span class="pill pill-teal">٧ شرائح</span>
           <span class="pill pill-gold">تصميم الحوكمة</span>
           <span class="pill pill-slate">مسودة نقاش · ٢٠٢٦</span>
         </div>
@@ -589,7 +584,7 @@
           </svg>
         </div>
       </div>
-      <div class="slide-num">01 / 08</div>
+      <div class="slide-num">01 / 07</div>
     </section>
 
     <section class="slide" id="s2">
@@ -629,7 +624,7 @@
             </div>
             <div class="hs-pillar-text">
               <h5>طبقة الحوكمة الموحدة</h5>
-              <p>تشرف لجنة توجيهية مشتركة على المحفظة الكاملة. تُطبق مؤشرات الأداء وسياسات البيانات وأخلاقيات الذكاء الاصطناعي <strong>على جميع الأذرع بالتساوي.</strong></p>
+              <p>تُطبق مؤشرات الأداء وسياسات البيانات وأخلاقيات الذكاء الاصطناعي <strong>على جميع الأذرع بالتساوي.</strong></p>
             </div>
           </div>
         </div>
@@ -675,7 +670,7 @@
       <div class="hs-key">
         <strong>المبدأ الجوهري:</strong> المحور يحكم ويمكّن ويوفر. الأذرع تنفذ وتسلّم وتعيد الرؤى. معاً يشكّلان نظاماً يعزز نفسه ويزداد قوةً مع توسع التبني.
       </div>
-      <div class="slide-num">02 / 08</div>
+      <div class="slide-num">02 / 07</div>
     </section>
 
 <section class="slide" id="s3">
@@ -828,7 +823,7 @@
     </div>
 
   </div>
-  <div class="slide-num">03 / 08</div>
+  <div class="slide-num">03 / 07</div>
 </section>
 
     <section class="slide" id="s4">
@@ -870,7 +865,7 @@
         <span class="shared-item">المشاريع التجريبية</span>
         <span class="shared-item">تقارير القيادة</span>
       </div>
-      <div class="slide-num">04 / 08</div>
+      <div class="slide-num">04 / 07</div>
     </section>
 
     <section class="slide" id="s5">
@@ -930,7 +925,7 @@
         <div class="legend-item"><div class="legend-dot" style="background:var(--accent-ai)"></div>الذراع تسلّم / تستهلك</div>
         <div class="legend-item"><div class="legend-dot" style="background:var(--teal)"></div>واجهة مشتركة</div>
       </div>
-      <div class="slide-num">05 / 08</div>
+      <div class="slide-num">05 / 07</div>
     </section>
 
     <section class="slide" id="s6">
@@ -950,13 +945,12 @@
               <li><span class="bullet-dt">›</span>استراتيجية الذكاء الاصطناعي والسياسات والحوكمة المسؤولة</li>
               <li><span class="bullet-dt">›</span>منصات MLOps وسجل النماذج وواجهات الذكاء الاصطناعي المشتركة</li>
               <li><span class="bullet-dt">›</span>بناء قدرات الذكاء الاصطناعي وتمكين الأذرع</li>
-              <li><span class="bullet-bi">›</span>خطوط البيانات المؤسسية والبيانات الرئيسية ومعايير الجودة</li>
-
             </ul>
           </div>
           <div class="hub-box box-bi">
             <div class="hub-box-title">مركز ذكاء الأعمال وتحليلات البيانات</div>
             <ul>
+              <li><span class="bullet-bi">›</span>خطوط البيانات المؤسسية والبيانات الرئيسية ومعايير الجودة</li>
               <li><span class="bullet-bi">›</span>منظومة التحليلات المشتركة ولوحات المعلومات وتقارير مؤشرات الأداء</li>
               <li><span class="bullet-bi">›</span>تطوير نماذج التعلم الآلي على أسس بيانات نظيفة ومحكومة</li>
               <li><span class="bullet-bi">›</span>ذكاء القرار ونمذجة السيناريوهات التنفيذية</li>
@@ -1028,68 +1022,28 @@
 
         </div>
       </div>
-      <div class="slide-num">06 / 08</div>
+      <div class="slide-num">06 / 07</div>
     </section>
 
     <section class="slide" id="s7">
-      <div class="corner-mark"></div>
-      <div class="corner-mark-br"></div>
-      <div class="slide-header">
-        <div class="slide-title">ضوابط وتنسيق العلاقات: <span>الذكاء الاصطناعي وذكاء الأعمال</span></div>
-        <div class="tag-box">Slide 07</div>
-      </div>
-      <div class="divider"></div>
-      
-      <div style="padding: 0 38px; display: flex; flex-direction: column; gap: 15px; flex: 1; overflow: hidden; justify-content: center;">
-
-        <div style="display: flex; gap: 12px;">
-          <div class="s7-box">
-            <h5 style="color: var(--accent-bi);">القاعدة التنظيمية الفاصلة بين الجهتين</h5>
-            <p style="font-size: 11px; font-weight: bold; margin-bottom: 6px; color: var(--ink);">مركز تحليل البيانات وذكاء الأعمال:</p>
-            <ul style="list-style-type: none; padding: 0; margin: 0;">
-              <li style="margin-bottom: 4px;">• تطوير الحلول الذكية والنماذج والخوارزميات</li>
-              <li>• تشغيل النماذج ومراقبتها وتمكين التبني المؤسسي</li>
-            </ul>
-          </div>
-          
-          <div class="s7-box">
-            <h5 style="color: var(--teal);">الخلاصة الفاصلة</h5>
-            <p style="font-size: 11px; font-weight: bold; margin-bottom: 6px; color: var(--ink);">مركز ذكاء الأعمال:</p>
-            <ul style="list-style-type: none; padding: 0; margin: 0;">
-              <li>• <strong>ماذا سيحدث؟</strong> (تتمركز المسؤولية التشغيلية والتطويرية في هذا المركز)</li>
-            </ul>
-          </div>
-        </div>
-
-        <div style="background: rgba(116,54,33,.06); border-right: 3px solid var(--teal); padding: 12px; border-radius: 2px;">
-          <h5 style="color: var(--teal); font-size: 12px; margin-bottom: 6px; font-family: 'Cairo', sans-serif;">ضوابط تنظيمية مختصرة لمنع التداخل</h5>
-          <p style="font-size: 11px; color: var(--text-secondary); line-height: 1.7;">
-            التحليل الوصفي والتشخيصي والنماذج التنبؤية والخوارزميات والاتمتة والابتكار التقني يبقى ضمن اختصاص <strong>مركز ذكاء الاعمال</strong>.
-          </p>
-        </div>
-
-      </div>
-      
-      <div class="slide-num">07 / 08</div>
-    </section>
-
-    <section class="slide" id="s8">
       <div class="corner-mark"></div>
       <div class="corner-mark-bl"></div>
 
       <div class="slide-header">
         <div class="slide-title">
           مصفوفة المسؤوليات
-          <span>RACI Matrix — وحدة الذكاء الاصطناعي مقابل مركز ذكاء الأعمال</span>
+          <span>RACI Matrix</span>
         </div>
-        <div class="tag-box">Slide 08</div>
+        <div class="tag-box">Slide 07</div>
       </div>
       <div class="divider"></div>
 
       <div class="raci-body">
 
         <div class="raci-legend">
-          <div class="raci-legend-item"><span class="raci-badge rb-ar">A/R</span>Accountable / Responsible — مساءل ومسؤول</div>
+          <div class="raci-legend-item"><span class="raci-badge rb-ar">A/R</span>Accountable / Responsible</div>
+          <div class="raci-legend-item"><span class="raci-badge rb-cr">C/R</span>Consulted / Responsible</div>
+          <div class="raci-legend-item"><span class="raci-badge rb-ci">C/I</span>Consulted / Informed</div>
           <div class="raci-legend-item"><span class="raci-badge rb-r">R</span>Responsible — مسؤول</div>
           <div class="raci-legend-item"><span class="raci-badge rb-a">A</span>Accountable — مساءل</div>
           <div class="raci-legend-item"><span class="raci-badge rb-c">C</span>Consulted — يُستشار</div>
@@ -1101,10 +1055,10 @@
             <thead>
               <tr>
                 <th class="th-fn-col">المهمة / النشاط</th>
-                <th class="th-bi-col">مركز ذكاء الأعمال</th>
-                <th class="th-ai-col">وحدة الذكاء الاصطناعي</th>
+                <th class="th-bi-col">ذكاء الأعمال</th>
+                <th class="th-ai-col">التحول الرقمي</th>
                 <th class="th-it-col">تقنية المعلومات / البنية الرقمية</th>
-                <th class="th-biz-col">قطاعات الأعمال</th>
+                <th class="th-biz-col">وحدات الأعمال (قطاعات الأعمال)</th>
               </tr>
             </thead>
             <tbody>
@@ -1112,116 +1066,93 @@
               <tr class="raci-group-header"><td colspan="5">الاستراتيجية والحوكمة</td></tr>
               <tr>
                 <td>توافق استراتيجية الذكاء الاصطناعي مع البيانات والتحليلات</td>
-                <td class="td-bi-col"><span class="raci-badge rb-ar">A/R</span></td>
-                <td class="td-ai-col"><span class="raci-badge rb-c">C</span></td>
+                <td class="td-bi-col"><span class="raci-badge rb-r">R</span></td>
+                <td class="td-ai-col"><span class="raci-badge rb-a">A</span></td>
                 <td class="td-it-col"><span class="raci-badge rb-i">I</span></td>
                 <td class="td-biz-col"><span class="raci-badge rb-c">C</span></td>
               </tr>
               <tr>
-                <td>إطار حوكمة الذكاء الاصطناعي</td>
-                <td class="td-bi-col"><span class="raci-badge rb-c">C</span></td>
-                <td class="td-ai-col"><span class="raci-badge rb-ar">A/R</span></td>
-                <td class="td-it-col"><span class="raci-badge rb-c">C</span></td>
-                <td class="td-biz-col"><span class="raci-badge rb-i">I</span></td>
+                <td>أخلاقيات الذكاء الاصطناعي في تحليل البيانات والتنبؤات التحليلية</td>
+                <td class="td-bi-col"><span class="raci-badge rb-r">R</span></td>
+                <td class="td-ai-col"><span class="raci-badge rb-a">A</span></td>
+                <td class="td-it-col"><span style="color: #ccc;">-</span></td>
+                <td class="td-biz-col"><span style="color: #ccc;">-</span></td>
               </tr>
               <tr>
-                <td>أخلاقيات الذكاء الاصطناعي وسياسات الذكاء الاصطناعي المسؤول</td>
-                <td class="td-bi-col"><span class="raci-badge rb-c">C</span></td>
-                <td class="td-ai-col"><span class="raci-badge rb-ar">A/R</span></td>
-                <td class="td-it-col"><span class="raci-badge rb-i">I</span></td>
-                <td class="td-biz-col"><span class="raci-badge rb-i">I</span></td>
+                <td>اخلاقيات الذكاء الاصطناعي في حالات الاستخدام الأخرى</td>
+                <td class="td-bi-col"><span style="color: #ccc;">-</span></td>
+                <td class="td-ai-col"><span class="raci-badge rb-a">A</span></td>
+                <td class="td-it-col"><span style="color: #ccc;">-</span></td>
+                <td class="td-biz-col"><span class="raci-badge rb-r">R</span></td>
               </tr>
 
               <tr class="raci-group-header"><td colspan="5">البيانات والنمذجة</td></tr>
               <tr>
                 <td>تحضير البيانات وهندسة الميزات</td>
-                <td class="td-bi-col"><span class="raci-badge rb-ar">A/R</span></td>
-                <td class="td-ai-col"><span class="raci-badge rb-c">C</span></td>
+                <td class="td-bi-col"><span class="raci-badge rb-r">R</span></td>
+                <td class="td-ai-col"><span class="raci-badge rb-a">A</span></td>
                 <td class="td-it-col"><span class="raci-badge rb-c">C</span></td>
-                <td class="td-biz-col"><span class="raci-badge rb-i">I</span></td>
-              </tr>
-              <tr>
-                <td>تطوير النماذج التنبؤية</td>
-                <td class="td-bi-col"><span class="raci-badge rb-ar">A/R</span></td>
-                <td class="td-ai-col"><span class="raci-badge rb-c">C</span></td>
-                <td class="td-it-col"><span class="raci-badge rb-i">I</span></td>
-                <td class="td-biz-col"><span class="raci-badge rb-c">C</span></td>
+                <td class="td-biz-col"><span style="color: #ccc;">-</span></td>
               </tr>
               <tr>
                 <td>التحليلات المتقدمة والنماذج الإحصائية</td>
-                <td class="td-bi-col"><span class="raci-badge rb-ar">A/R</span></td>
-                <td class="td-ai-col"><span class="raci-badge rb-i">I</span></td>
-                <td class="td-it-col"><span class="raci-badge rb-i">I</span></td>
-                <td class="td-biz-col"><span class="raci-badge rb-c">C</span></td>
+                <td class="td-bi-col"><span class="raci-badge rb-r">R</span></td>
+                <td class="td-ai-col"><span class="raci-badge rb-a">A</span></td>
+                <td class="td-it-col"><span class="raci-badge rb-c">C</span></td>
+                <td class="td-biz-col"><span class="raci-badge rb-cr">C/R</span></td>
               </tr>
 
               <tr class="raci-group-header"><td colspan="5">إدارة حالات الاستخدام</td></tr>
               <tr>
-                <td>تحديد حالات استخدام الأعمال</td>
-                <td class="td-bi-col"><span class="raci-badge rb-ar">A/R</span></td>
-                <td class="td-ai-col"><span class="raci-badge rb-c">C</span></td>
-                <td class="td-it-col"><span class="raci-badge rb-i">I</span></td>
-                <td class="td-biz-col"><span class="raci-badge rb-r">C</span></td>
+                <td>اقتراح حالات الاستخدام فيما يتعلق بتحليل البيانات والتنبؤات التحليلية</td>
+                <td class="td-bi-col"><span class="raci-badge rb-c">C</span></td>
+                <td class="td-ai-col"><span class="raci-badge rb-a">A</span></td>
+                <td class="td-it-col"><span style="color: #ccc;">-</span></td>
+                <td class="td-biz-col"><span class="raci-badge rb-r">R</span></td>
               </tr>
               <tr>
-                <td>تحديد أولويات حالات استخدام الذكاء الاصطناعي</td>
-                <td class="td-bi-col"><span class="raci-badge rb-ar">A/R</span></td>
-                <td class="td-ai-col"><span class="raci-badge rb-c">C</span></td>
-                <td class="td-it-col"><span class="raci-badge rb-i">I</span></td>
-                <td class="td-biz-col"><span class="raci-badge rb-c">C</span></td>
+                <td>اعتماد حالات الاستخدام وتحديد الأولويات</td>
+                <td class="td-bi-col"><span class="raci-badge rb-c">C</span></td>
+                <td class="td-ai-col"><span class="raci-badge rb-ar">A/R</span></td>
+                <td class="td-it-col"><span style="color: #ccc;">-</span></td>
+                <td class="td-biz-col"><span style="color: #ccc;">-</span></td>
+              </tr>
+              <tr>
+                <td>تنفيذ حالات الاستخدام فيما يتعلق بتحليل البيانات والتنبؤات التحليلية</td>
+                <td class="td-bi-col"><span class="raci-badge rb-r">R</span></td>
+                <td class="td-ai-col"><span class="raci-badge rb-a">A</span></td>
+                <td class="td-it-col"><span style="color: #ccc;">-</span></td>
+                <td class="td-biz-col"><span class="raci-badge rb-ci">C/I</span></td>
+              </tr>
+              <tr>
+                <td>تنفيذ حالات الاستخدام الأخرى</td>
+                <td class="td-bi-col"><span style="color: #ccc;">-</span></td>
+                <td class="td-ai-col"><span class="raci-badge rb-a">A</span></td>
+                <td class="td-it-col"><span style="color: #ccc;">-</span></td>
+                <td class="td-biz-col"><span class="raci-badge rb-r">R</span></td>
               </tr>
 
               <tr class="raci-group-header"><td colspan="5">المنصات والبنية التحتية</td></tr>
               <tr>
                 <td>منصة وبنية تحتية للذكاء الاصطناعي</td>
                 <td class="td-bi-col"><span class="raci-badge rb-i">I</span></td>
-                <td class="td-ai-col"><span class="raci-badge rb-ar">A/R</span></td>
-                <td class="td-it-col"><span class="raci-badge rb-r">R</span></td>
-                <td class="td-biz-col"><span class="raci-badge rb-i">I</span></td>
-              </tr>
-              <tr>
-                <td>MLOps وإطار نشر النماذج</td>
-                <td class="td-bi-col"><span class="raci-badge rb-c">C</span></td>
-                <td class="td-ai-col"><span class="raci-badge rb-ar">A/R</span></td>
-                <td class="td-it-col"><span class="raci-badge rb-r">R</span></td>
-                <td class="td-biz-col"><span class="raci-badge rb-i">I</span></td>
-              </tr>
-              <tr>
-                <td>التجريب (بيئة الاختبار / مختبر الذكاء الاصطناعي)</td>
-                <td class="td-bi-col"><span class="raci-badge rb-r">R</span></td>
                 <td class="td-ai-col"><span class="raci-badge rb-a">A</span></td>
-                <td class="td-it-col"><span class="raci-badge rb-c">C</span></td>
-                <td class="td-biz-col"><span class="raci-badge rb-c">C</span></td>
-              </tr>
-              <tr>
-                <td>مراقبة النماذج وإدارة دورة حياتها</td>
-                <td class="td-bi-col"><span class="raci-badge rb-c">C</span></td>
-                <td class="td-ai-col"><span class="raci-badge rb-ar">A/R</span></td>
                 <td class="td-it-col"><span class="raci-badge rb-r">R</span></td>
                 <td class="td-biz-col"><span class="raci-badge rb-i">I</span></td>
               </tr>
-
-              <tr class="raci-group-header"><td colspan="5">الرؤى وبناء القدرات</td></tr>
               <tr>
-                <td>توليد الرؤى ودعم اتخاذ القرار</td>
-                <td class="td-bi-col"><span class="raci-badge rb-ar">A/R</span></td>
-                <td class="td-ai-col"><span class="raci-badge rb-i">I</span></td>
-                <td class="td-it-col"><span class="raci-badge rb-i">I</span></td>
-                <td class="td-biz-col"><span class="raci-badge rb-c">C</span></td>
+                <td>MLOps</td>
+                <td class="td-bi-col"><span style="color: #ccc;">-</span></td>
+                <td class="td-ai-col"><span class="raci-badge rb-a">A</span></td>
+                <td class="td-it-col"><span class="raci-badge rb-r">R</span></td>
+                <td class="td-biz-col"><span style="color: #ccc;">-</span></td>
               </tr>
               <tr>
-                <td>لوحات المعلومات المدعومة بالذكاء الاصطناعي وأنظمة دعم القرار</td>
-                <td class="td-bi-col"><span class="raci-badge rb-ar">A/R</span></td>
-                <td class="td-ai-col"><span class="raci-badge rb-c">C</span></td>
-                <td class="td-it-col"><span class="raci-badge rb-i">I</span></td>
-                <td class="td-biz-col"><span class="raci-badge rb-c">C</span></td>
-              </tr>
-              <tr>
-                <td>بناء قدرات الذكاء الاصطناعي</td>
-                <td class="td-bi-col"><span class="raci-badge rb-c">C</span></td>
+                <td>إطار نشر النماذج</td>
+                <td class="td-bi-col"><span style="color: #ccc;">-</span></td>
                 <td class="td-ai-col"><span class="raci-badge rb-ar">A/R</span></td>
                 <td class="td-it-col"><span class="raci-badge rb-i">I</span></td>
-                <td class="td-biz-col"><span class="raci-badge rb-i">I</span></td>
+                <td class="td-biz-col"><span style="color: #ccc;">-</span></td>
               </tr>
 
             </tbody>
@@ -1229,7 +1160,7 @@
         </div>
 
       </div>
-      <div class="slide-num">08 / 08</div>
+      <div class="slide-num">07 / 07</div>
     </section>
   </div>
 </div>
